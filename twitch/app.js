@@ -3,7 +3,7 @@ const app = express();
 const server = require('http').createServer(app);
 const dotenv = require('dotenv').config()
 const passport = require('passport');
-const TwitchtvStrategy = require('passport-twitchtv').Strategy;
+const TwitchStrategy = require('passport-twitch').Strategy;
 
 // Vues
 app.set('views', __dirname + '/views');
@@ -12,14 +12,14 @@ app.set('view engine', 'ejs');
 
 // Google config
 const config = require('./oauth.js');
-passport.use('twitchtv', new TwitchtvStrategy({
+passport.use('twitch', new TwitchStrategy({
     clientID        : config.twitch.clientID,
     clientSecret    : config.twitch.clientSecret,
     callbackURL     : config.twitch.callbackURL,
     scope: "user_read"
     },
 
-    function(access_token, refresh_token, profile, done) {
+    function(accessToken, refreshToken, profile, done) {
         process.nextTick(function() {
             return done(JSON.stringify(profile));
         });
