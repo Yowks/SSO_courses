@@ -17,10 +17,9 @@ passport.use(new LinkedInStrategy({
     clientSecret    : config.linkedin.clientSecret,
     callbackURL     : config.linkedin.callbackURL,
     scope: ['r_emailaddress', 'r_basicprofile'],
-
     },
 
-    function(access_token, refresh_token, profile, done) {
+    function(accessToken, refreshToken, profile, done) {
         process.nextTick(function() {
             return done(JSON.stringify(profile));
         });
