@@ -5,7 +5,7 @@ const dotenv = require('dotenv').config()
 const passport = require('passport');
 const AmazonStrategy = require('passport-amazon').Strategy;
 
-// Vues
+// Vues 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
