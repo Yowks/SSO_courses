@@ -1,9 +1,17 @@
 const express = require("express");
 const app = express();
 const server = require('http').createServer(app);
+const session = require('express-session');
 const dotenv = require('dotenv').config()
 const passport = require('passport');
 const TrelloStrategy = require('passport-trello').Strategy;
+
+app.use(session({
+    secret: "E€$=vD6€HxP6vg&U33h2LZ96!;3Q4tm>mRµ",
+    saveUninitialized: true,
+    resave: true
+}))
+
 
 // Vues
 app.set('views', __dirname + '/views');
@@ -19,7 +27,7 @@ passport.use('trello', new TrelloStrategy({
     passReqToCallback: true,
     },
 
-    function(access_token, refresh_token, profile, done) {
+    function(req, token, tokenSecret, profile, done) {
         process.nextTick(function() {
             return done(JSON.stringify(profile));
         });
