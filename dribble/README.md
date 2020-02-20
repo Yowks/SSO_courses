@@ -11,7 +11,7 @@ npm install
 ```
 
 ## Configuration 
-Pour commencer, créez et configurez votre application Dribbble [ici](https://dribbble.com/account/applications/new) et en ajoutant le produit **instagram**, en configurant bien l'app et en ajoutant `http://localhost:3030/login/callback` en url de **callback**, puis récupérez les `client_id` et `client_secret`
+Pour commencer, créez et configurez votre application Dribbble [ici](https://dribbble.com/account/applications/new), en configurant bien l'app et en ajoutant `http://localhost:3030/login/callback` en url de **callback**, puis récupérez les `client_id` et `client_secret`
 
 Ensuite, créez un fichier .env a la racine du dossier **/dribbble**, il contiendra les codes d'authentification a votre application Dribbble
 ```
