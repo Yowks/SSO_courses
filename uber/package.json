@@ -21,8 +21,6 @@
     "dotenv": "^8.2.0",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
-    "passport": "^0.4.1",
-    "passport-imgur": "0.0.3",
-    "passport-uber-v2": "^0.1.1"
+    "passport": "^0.4.1"
   }
 }

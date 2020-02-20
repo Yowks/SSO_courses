@@ -1,5 +1,5 @@
 
-## Authentification SSO (Imgur)(Work In Progress)
+## Authentification SSO (Imgur)
 
  
 Utilisation de Imgur pour s'authentifier et récupérer les données liées au compte
